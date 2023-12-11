@@ -16,6 +16,8 @@ RUN sudo apt-get upgrade -y
 RUN sudo apt install python3-pip -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt-get install flac
+RUN sudo apt-get install build-essential cmake git pkg-config
+RUN sudo apt-get install libjpeg-dev libtiff-dev libpng-dev
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
