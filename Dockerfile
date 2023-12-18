@@ -18,9 +18,6 @@ RUN sudo apt install ffmpeg -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install build-essential cmake git pkg-config -y
 RUN sudo apt-get install libjpeg-dev libtiff-dev libpng-dev -y
-RUN sudo apt install nodejs -y
-RUN sudo apt install npm -y
-RUN sudo npm install -g npm@latest
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
