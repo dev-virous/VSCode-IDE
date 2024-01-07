@@ -1,4 +1,5 @@
 # Start from the code-server Debian base image
+FROM nikolaik/python-nodejs:python3.9-nodejs18
 FROM codercom/code-server:latest
 
 USER coder
@@ -19,8 +20,6 @@ RUN sudo apt-get install build-essential cmake git pkg-config -y
 RUN sudo apt-get install libjpeg-dev libtiff-dev libpng-dev -y
 RUN sudo apt-get install python3-libtorrent -y
 RUN curl https://rclone.org/install.sh | sudo bash
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-RUN sudo apt-get install nodejs -y
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
@@ -45,7 +44,6 @@ RUN code-server --install-extension esbenp.prettier-vscode
 
 # Port
 ENV PORT=8080
-FROM nikolaik/python-nodejs:python3.9-nodejs18
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
