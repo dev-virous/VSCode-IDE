@@ -20,6 +20,7 @@ RUN sudo apt-get install build-essential cmake git pkg-config -y
 RUN sudo apt-get install libjpeg-dev libtiff-dev libpng-dev -y
 RUN sudo apt-get install python3-libtorrent -y
 RUN curl https://rclone.org/install.sh | sudo bash
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo bash - && apt-get install nodejs -y
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
