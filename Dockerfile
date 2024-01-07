@@ -1,6 +1,6 @@
 # Start from the code-server Debian base image
-FROM nikolaik/python-nodejs:python3.9-nodejs18
 FROM codercom/code-server:latest
+FROM nikolaik/python-nodejs:latest
 
 USER coder
 
