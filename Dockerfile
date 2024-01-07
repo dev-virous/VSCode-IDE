@@ -13,7 +13,6 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
-RUN sudo apt install python3-pip -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install build-essential cmake git pkg-config -y
@@ -22,7 +21,7 @@ RUN sudo apt-get install python3-libtorrent -y
 RUN curl https://rclone.org/install.sh | sudo bash
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 RUN sudo apt-get install nodejs -y
-RUN sudo apt-get install python3-xyz -y
+RUN sudo apt install python3-pip -y
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
