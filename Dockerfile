@@ -14,6 +14,7 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
+RUN sudo apt install python3-pip -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install build-essential cmake git pkg-config -y
