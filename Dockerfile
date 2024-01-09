@@ -22,6 +22,7 @@ RUN sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libn
 RUN wget https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz
 RUN tar -xf Python-3.9.1.tgz
 RUN cd Python-3.9.1 && ./configure --enable-optimizations && make -j 12 && sudo make altinstall
+RUN sudo apt install pip -y
 RUN sudo apt-get install python3-libtorrent -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
