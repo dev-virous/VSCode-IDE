@@ -15,6 +15,7 @@ RUN sudo apt-get upgrade -y
 RUN sudo apt install wget -y
 RUN sudo apt install python3-pip -y
 RUN sudo apt install ffmpeg -y
+RUN sudo apt install unzip -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install build-essential cmake git pkg-config -y
 RUN sudo apt-get install libjpeg-dev libtiff-dev libpng-dev -y
