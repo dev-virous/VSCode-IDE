@@ -12,14 +12,11 @@ ENV SHELL=/bin/bash
 # Install unzip + rclone (support for remote filesystem)
 RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
-RUN sudo apt install python3.10-pip -y
+RUN sudo apt install python3-pip -y
 RUN sudo apt install wget -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
 RUN sudo apt-get install flac
-RUN sudo apt-get install build-essential cmake git pkg-config -y
-RUN sudo apt-get install libjpeg-dev libtiff-dev libpng-dev -y
-RUN sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y
 RUN sudo apt-get install python3-libtorrent -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
