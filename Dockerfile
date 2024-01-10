@@ -14,11 +14,12 @@ RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
 RUN sudo apt install git -y
 RUN sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git -y
-RUN git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-RUN echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-RUN echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
-RUN exec "$SHELL"
+RUN curl https://pyenv.run | bash
+RUN sudo apt install curl -y 
+RUN sudo apt install git -y
+RUN export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init --path)" && echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
+RUN exec $SHELL
+RUN pyenv --version
 RUN pyenv install 3.10.13
 RUN sudo apt install wget -y
 RUN sudo apt install ffmpeg -y
