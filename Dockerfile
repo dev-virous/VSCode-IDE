@@ -12,7 +12,7 @@ ENV SHELL=/bin/bash
 # Install unzip + rclone (support for remote filesystem)
 RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
-RUN sudo apt install python3.9-pip -y
+RUN sudo apt install python3.9 -y
 RUN sudo apt install wget -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
