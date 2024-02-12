@@ -13,7 +13,7 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
 RUN sudo apt install git -y
-RUN apt install python3-pip -y
+RUN sudo apt install python3-pip -y
 RUN sudo apt install wget -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
