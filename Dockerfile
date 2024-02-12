@@ -13,12 +13,7 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
 RUN sudo apt install git -y
-RUN sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git -y
-RUN curl https://pyenv.run | bash
-RUN export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init --path)" && echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
-RUN exec $SHELL
-RUN ./pyenv --version
-RUN pyenv install 3.10.13
+RUN apt install python3-pip -y
 RUN sudo apt install wget -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
