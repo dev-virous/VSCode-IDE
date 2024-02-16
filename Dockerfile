@@ -20,7 +20,7 @@ RUN sudo apt install unzip -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
 RUN sudo apt-get install snapd -y
-RUN sudo snap install chromium-browser
+RUN sudo snap install chromium
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
