@@ -21,7 +21,6 @@ RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
 RUN sudo apt-get install snapd -y
 RUN sudo systemctl enable snapd.service
-RUN sudo systemctl start snapd.service
 RUN sudo snap install chromium
 RUN curl https://rclone.org/install.sh | sudo bash
 
