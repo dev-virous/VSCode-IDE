@@ -19,6 +19,9 @@ RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
+RUN yes | pkg install x11-repo -y
+RUN yes | pkg install tur-repo -y
+RUN yes | pkg install chromium -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
