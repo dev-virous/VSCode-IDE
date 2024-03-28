@@ -18,6 +18,7 @@ RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
+RUN sudo pip install requests_html
 RUN sudo pip install pillow
 RUN sudo pip install transformers
 RUN curl https://rclone.org/install.sh | sudo bash
