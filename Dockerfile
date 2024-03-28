@@ -18,6 +18,7 @@ RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
+RUN pip3 install torch torchvision torchaudio pillow transformers requests_html
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
@@ -32,7 +33,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 RUN code-server --install-extension esbenp.prettier-vscode
-# RUN code-server --install-extension ms-python.python
+RUN code-server --install-extension ms-python.python
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
