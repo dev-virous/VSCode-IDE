@@ -21,9 +21,13 @@ RUN sudo apt-get install python3-libtorrent -y
 RUN sudo apt-get install python3-torch -y
 RUN sudo apt-get install python3-torchvision -y
 RUN sudo apt-get install python3-torchaudio -y
-RUN sudo pip install requests_html
-RUN sudo pip install pillow
-RUN sudo pip install transformers
+RUN sudo apt-get install python3-requests_html -y
+RUN sudo apt-get install python3-pillow -y
+RUN sudo apt-get install python3-packaging -y
+RUN sudo apt-get install python3-psutil -y
+RUN sudo apt-get install python3-pyyaml -y
+RUN sudo apt-get install python3-transformers -y
+RUN sudo apt-get install python3-accelerate -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
