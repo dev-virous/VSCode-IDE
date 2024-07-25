@@ -24,7 +24,6 @@ RUN sudo apt-get install python3-torchaudio -y
 RUN sudo apt-get install python3-pillow -y
 RUN sudo apt-get install python3-packaging -y
 RUN sudo apt-get install python3-psutil -y
-RUN sudo apt-get install python3-pyyaml -y
 RUN sudo apt-get install python3-transformers -y
 RUN sudo apt-get install python3-accelerate -y
 RUN curl https://rclone.org/install.sh | sudo bash
