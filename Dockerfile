@@ -21,7 +21,6 @@ RUN sudo apt-get install python3-libtorrent -y
 RUN sudo apt-get install python3-torch -y
 RUN sudo apt-get install python3-torchvision -y
 RUN sudo apt-get install python3-torchaudio -y
-RUN sudo apt-get install python3-requests_html -y
 RUN sudo apt-get install python3-pillow -y
 RUN sudo apt-get install python3-packaging -y
 RUN sudo apt-get install python3-psutil -y
