@@ -49,7 +49,7 @@ RUN code-server --install-extension ms-python.python
 # -----------
 
 # Port
-ENV PORT=8080
+ENV PORT=80
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
