@@ -18,12 +18,6 @@ RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
-RUN sudo apt-get install python3-torch -y
-RUN sudo apt-get install python3-torchvision -y
-RUN sudo apt-get install python3-torchaudio -y
-RUN sudo apt-get install python3-pillow -y
-RUN sudo apt-get install python3-packaging -y
-RUN sudo apt-get install python3-psutil -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
