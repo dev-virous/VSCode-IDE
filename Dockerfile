@@ -17,7 +17,7 @@ RUN sudo apt install wget -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
 RUN sudo apt install p7zip-full -y
-RUN sudo apt-get install flac -y
+RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
