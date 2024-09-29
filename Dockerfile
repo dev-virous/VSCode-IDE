@@ -16,7 +16,7 @@ RUN sudo apt install python3-pip -y
 RUN sudo apt install wget -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
-RUN sudo apt install unrar
+RUN sudo apt-get install unrar - y
 RUN sudo apt install p7zip-full -y
 RUN sudo apt-get install flac -y
 RUN sudo apt-get install python3-libtorrent -y
