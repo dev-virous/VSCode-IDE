@@ -10,7 +10,6 @@ ENV SHELL=/bin/bash
 
 # Install unzip + rclone (support for remote filesystem)
 RUN sudo apt-get update -y
-RUN sudo apt-get install unrar - y
 RUN sudo apt-get upgrade -y
 RUN sudo apt install git -y
 RUN sudo apt install python3-pip -y
