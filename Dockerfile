@@ -14,7 +14,7 @@ RUN sudo apt-get update -y && \
     wget \
     build-essential \
     checkinstall \
-    libreadline-gplv2-dev \
+    libreadline-dev \  # Updated package
     libncursesw5-dev \
     libssl-dev \
     libsqlite3-dev \
