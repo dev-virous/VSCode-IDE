@@ -12,14 +12,22 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
 RUN sudo apt install git -y
-RUN sudo apt install python3-pip -y
 RUN sudo apt install wget -y
 RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
 RUN sudo apt install p7zip-full -y
-RUN sudo apt-get install flac
+RUN sudo apt-get install flac -y
 RUN sudo apt-get install python3-libtorrent -y
 RUN curl https://rclone.org/install.sh | sudo bash
+
+# Install Python 3.10
+RUN sudo apt-get install -y software-properties-common
+RUN sudo add-apt-repository ppa:deadsnakes/ppa -y
+RUN sudo apt-get update -y
+RUN sudo apt-get install -y python3.10 python3.10-distutils
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+RUN python3.10 get-pip.py
+RUN rm get-pip.py
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
