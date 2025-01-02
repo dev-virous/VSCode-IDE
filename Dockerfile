@@ -14,7 +14,7 @@ RUN sudo apt-get update -y && \
     wget \
     build-essential \
     checkinstall \
-    libreadline-dev \  # Updated package
+    libreadline-dev \
     libncursesw5-dev \
     libssl-dev \
     libsqlite3-dev \
@@ -69,6 +69,4 @@ RUN code-server --install-extension esbenp.prettier-vscode && \
 ENV PORT=80
 ENV PASSWORD=1234
 
-# Use our custom entrypoint script first
-COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
-ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
+# Use our custom entry
