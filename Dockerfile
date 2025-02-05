@@ -28,20 +28,20 @@ RUN sudo apt-get update -y && \
     libgdbm-compat-dev \
     uuid-dev
 
-# Download and build Python 3.10
-RUN wget https://www.python.org/ftp/python/3.10.12/Python-3.10.12.tgz && \
-    tar xzf Python-3.10.12.tgz && \
-    cd Python-3.10.12 && \
-    ./configure --enable-optimizations && \
-    make -j$(nproc) && \
-    sudo make altinstall && \
-    cd .. && \
-    rm -rf Python-3.10.12 Python-3.10.12.tgz
+# # Download and build Python 3.10
+# RUN wget https://www.python.org/ftp/python/3.10.12/Python-3.10.12.tgz && \
+#     tar xzf Python-3.10.12.tgz && \
+#     cd Python-3.10.12 && \
+#     ./configure --enable-optimizations && \
+#     make -j$(nproc) && \
+#     sudo make altinstall && \
+#     cd .. && \
+#     rm -rf Python-3.10.12 Python-3.10.12.tgz
 
-# Install pip for Python 3.10
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-    python3.10 get-pip.py && \
-    rm get-pip.py
+# # Install pip for Python 3.10
+# RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+#     python3.10 get-pip.py && \
+#     rm get-pip.py
 
 # Install unzip + rclone (support for remote filesystem)
 RUN sudo apt-get install -y \
