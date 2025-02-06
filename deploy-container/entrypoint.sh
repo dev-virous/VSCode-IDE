@@ -8,7 +8,7 @@ mkdir -p $START_DIR
 
 # function to clone the git repo or add a user's first file if no repo was specified.
 project_init () {
-    [ -z "${GIT_REPO}" ] && echo "[$PREFIX] No GIT_REPO specified" && echo -e "torch==2.4.0\ntorchvision==0.19.0\ntorchaudio==2.4.0\npackaging==24.1\npsutil==6.0.0\npyyaml==6.0.1\nrequests==2.32.3\ntransformers==4.43.3\naccelerate==0.33.0\nflask==3.0.3\nlangid==1.1.6\nSentencePiece==0.2.0" > $START_DIR/coder.txt || git clone $GIT_REPO $START_DIR
+    [ -z "${GIT_REPO}" ] && echo "[$PREFIX] No GIT_REPO specified" && echo -e "virus is here" > $START_DIR/coder.txt || git clone $GIT_REPO $START_DIR
 }
 
 # add rclone config and start rclone, if supplied
