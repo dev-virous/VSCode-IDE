@@ -45,7 +45,7 @@ RUN code-server --install-extension ms-python.python
 # -----------
 
 # Port
-ENV PORT=80
+ENV PORT=8081
 ENV PASSWORD=1234
 
 # Use our custom entrypoint script first
