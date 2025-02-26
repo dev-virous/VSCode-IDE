@@ -24,12 +24,6 @@ RUN sudo apt install build-essential software-properties-common -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
 RUN curl https://rclone.org/install.sh | sudo bash
-RUN wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb && \
-    dpkg -i cuda-keyring_1.1-1_all.deb && \
-    rm cuda-keyring_1.1-1_all.deb
-RUN apt-get update && apt-get install -y \
-    cuda-toolkit-12-1 \
-    && rm -rf /var/lib/apt/lists/*
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
