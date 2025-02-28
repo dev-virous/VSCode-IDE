@@ -7,8 +7,6 @@ COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 
 # Use bash shell
 ENV SHELL=/bin/bash
-ENV PATH="/usr/local/cuda/bin:${PATH}"
-ENV LD_LIBRARY_PATH="/usr/local/cuda/lib64:${LD_LIBRARY_PATH}"
 
 # Install unzip + rclone (support for remote filesystem)
 RUN sudo apt-get update -y
@@ -21,6 +19,7 @@ RUN sudo apt install unzip -y
 RUN sudo apt install p7zip-full -y
 RUN sudo apt install pciutils lshw -y
 RUN sudo apt install libarchive-tools -y
+RUN sudo apt install cpio -y
 RUN sudo apt install build-essential software-properties-common -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
