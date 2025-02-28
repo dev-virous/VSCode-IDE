@@ -20,6 +20,7 @@ RUN sudo apt install ffmpeg -y
 RUN sudo apt install unzip -y
 RUN sudo apt install p7zip-full -y
 RUN sudo apt install pciutils lshw -y
+RUN sudo apt install libarchive-tools -y
 RUN sudo apt install build-essential software-properties-common -y
 RUN sudo apt-get install flac
 RUN sudo apt-get install python3-libtorrent -y
