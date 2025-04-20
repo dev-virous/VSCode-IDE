@@ -1,6 +1,6 @@
 # Start from the code-server Debian base image
 FROM codercom/code-server:4.10.0
-USER root
+USER coder
 
 # Apply VS Code settings
 COPY deploy-container/settings.json .local/share/code-server/User/settings.json
@@ -53,4 +53,5 @@ ENV PASSWORD=1234
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
+USER root
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
