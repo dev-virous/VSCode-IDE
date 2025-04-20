@@ -53,5 +53,4 @@ ENV PASSWORD=1234
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
-USER root
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
